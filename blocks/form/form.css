@@ -12,11 +12,12 @@ main .form input, main textarea, main button {
 
 main .form button {
   color: var(--heading);
-  background-color: var(--background);
+  opacity: 0.75;
+  background-color: var(--highlight);
 }
 
 main .form button:hover {
-  background-color: var(--highlight);
+  opacity: 1;
   cursor: pointer;
 }
 
