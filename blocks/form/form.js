@@ -24,11 +24,11 @@ export default async function decorate($block) {
     .then((resp) => resp.json())
     .then(({ data }) => {
       const fields = [];
+      let recipient;
       data.forEach(({ label, type, value }) => {
         const fieldId = toClassName(label);
         let $field;
         let $label = document.createElement('label');
-        let recipient;
         $label.textContent = label;
         $label.for = fieldId;
         switch (type) {
@@ -46,7 +46,7 @@ export default async function decorate($block) {
             $label = null;
             break;
           case 'recipient':
-            recipient = value;
+            recipient = recipient || value;
             $label = null;
             $field = null;
             break;
