@@ -252,7 +252,7 @@ function decorateLinks($main) {
       // check if link text is phone number
       const linkText = $a.textContent.trim().replace(/\s/g, '');
       if (/^\d{10}$/.test(linkText)) {
-        $a.setAttribute('href', `call:+41${linkText.substring(1)}`);
+        $a.setAttribute('href', `tel:+41${linkText.substring(1)}`);
       }
     } else if (href.startsWith('http')) {
       try {
