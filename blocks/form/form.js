@@ -5,6 +5,9 @@ import {
 
 function submit(fields, recipient) {
   if (!recipient || !recipient.includes('@')) return;
+  if (fields.some(($field) => !$field.value)) {
+    return alert('Bitte füllen Sie alle Felder aus. Besten Dank!');
+  }
   let body = `${fields.pop().value}\n\n`;
   body += 'Meine Angaben:\n';
   fields.forEach(($field) => body += `${$field.name}: ${$field.value}\n`);
