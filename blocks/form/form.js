@@ -1,6 +1,6 @@
 import {
-  readBlockConfig,
   toClassName,
+  addPublishDependencies,
 } from '/scripts.js';
 
 function submit(fields, recipient) {
@@ -18,7 +18,9 @@ export default async function decorate($block) {
   const formName = $block.textContent.trim();
   $block.innerHTML = '';
   if (!formName) return;
-  fetch(`/${formName}.json`)
+  const formJson = `/${formName}.json`;
+  addPublishDependencies(formJson);
+  fetch(formJson)
     .then((resp) => resp.json())
     .then(({ data }) => {
       const fields = [];

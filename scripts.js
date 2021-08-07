@@ -41,6 +41,19 @@
   });
 }
 
+export function addPublishDependencies(url) {
+  if (!Array.isArray(url)) {
+    // eslint-disable-next-line no-param-reassign
+    url = [url];
+  }
+  window.hlx = window.hlx || {};
+  if (window.hlx.dependencies && Array.isArray(window.hlx.dependencies)) {
+    window.hlx.dependencies.concat(url);
+  } else {
+    window.hlx.dependencies = url;
+  }
+}
+
 /**
  * Decorates a block.
  * @param {Element} $block The block element
@@ -329,6 +342,7 @@ function decoratePage(win = window) {
       if ($footer) {
         decorateFooter($footer);
       }
+      addPublishDependencies('/nav.json');
     });
   }
 }
