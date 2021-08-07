@@ -1,0 +1,34 @@
+main .form input, main textarea, main button {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.25rem;
+  width: 100%;
+  max-width: 50rem;
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.75rem 0.6rem;    
+  border-radius: 0.25rem;
+  border: 1px solid var(--text);
+}
+
+main .form button {
+  color: var(--heading);
+  background-color: var(--background);
+}
+
+main .form button:hover {
+  background-color: var(--highlight);
+  cursor: pointer;
+}
+
+main .form input, main textarea {
+  color: rgb(var(--text));
+  background-color: transparent;
+}
+
+main textarea {
+  min-height: 10rem;
+}
+
+main .form input:hover {
+  border: 1px solid var(--text);
+}
