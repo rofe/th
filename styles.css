@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+html.theme-1 {
+  --highlight: #590202;
+  --text: #400106;
+  --heading: #8C0410;
+  --content: #BF0A19;
+  --background: #FFFFFF;
+}
+
+html.theme-2 {
+  --content: #D1BF91;
+  --text: #60371E;
+  --heading: #A6341B;
+  --highlight: #F9C743;
+  --background: #C7C8C4;
+}
+
+html.theme-3 {
+  --background: #D8D9D7;
+  --heading: #F27405;
+  --highlight: #F25C05;
+  --nav: #F28B50;
+  --text: #A62103;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  color: var(--text);
+  font-size: 1.2rem;
+  background-color: var(--background);
+}
+
+header, footer {
+  background-color: var(--heading);
+  color: var(--highlight);
+  padding: 1rem;
+  padding: 1rem;
+  font-weight: 600;
+  min-height: 3rem;
+  font-size: 0.75rem;
+}
+
+main {
+  margin-top: 0;
+  background: var(--content);
+  padding-bottom: 2rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+  height: fit-content;
+}
+
+header, main, footer {
+  margin: 0 auto;  
+  width: 100vw;
+  max-width: 650px;
+}
+
+main.ready {
+  opacity: 1;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-weight: 600;
+  font-style: italic;
+  color: var(--heading);
+  line-height: 1.5;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: .875rem; }
+
+p, dl, ol, ul, pre, blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+  
+a:any-link {
+  color: var(--heading);
+  /* text-decoration: none; */
+}
+a:hover {
+  text-decoration: underline;
+}
+
+main>.section-wrapper {
+  padding: 2rem 3rem 0 3rem; 
+}
+
+main>.section-wrapper.hero {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 0;
+  padding: 2rem 3rem;
+  background-size: cover;
+  background-position: center center;
+  height: 300px;
+  text-shadow: 0 0 5px black;
+}
+
+main>.section-wrapper.hero h1 {
+  color: var(--highlight);
+  margin-bottom: 1rem;
+}
+
+main p:empty {
+  display: none;
+}
+
+main li {
+  padding: .5rem 0;
+}
+
+main blockquote {
+  font-style: italic;
+  margin: 3rem;
+  text-indent: -1rem;
+  hanging-punctuation: first;
+}
+
+main blockquote p::before {
+  content: "â€œ";
+  line-height: 0;
+}
+
+main blockquote p::after {
+  content: "â€";
+  line-height: 0;
+}
+
+main img {
+  max-width: 80%;
+  height: auto;
+}
+
+@media (min-width: 600px) {
+  main>.section-wrapper.hero {
+    height: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header, main, footer {
+    max-width: 800px;
+  }
+}
