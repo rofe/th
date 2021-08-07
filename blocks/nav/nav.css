@@ -1,0 +1,35 @@
+.nav > ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav > ul > li {
+  margin: 0 1rem 0 0;
+  white-space: nowrap;
+}
+
+.nav a:any-link {
+  color: var(--highlight);
+  opacity: 0.75;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav a:any-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.nav a.selected:any-link {
+  opacity: 1;
+}
+
+@media (min-width: 600px) {
+  .nav > ul > li {
+    margin-right: 2rem;
+  }
+}
