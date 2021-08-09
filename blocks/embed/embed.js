@@ -63,7 +63,7 @@ const EMBEDS_CONFIG = {
   },
 };
 
-const LOAD_DELAY = 1000;
+const LOAD_DELAY = 2000;
 
 function decorateBlockEmbeds($block) {
   $block.querySelectorAll('.embed.block a[href]').forEach(($a) => {
