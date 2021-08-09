@@ -108,7 +108,7 @@ main>.section-wrapper.hero {
   display: flex;
   align-items: flex-end;
   margin-top: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 3rem 1.5rem 3rem;
   background-size: cover;
   background-position: center center;
   height: 300px;
@@ -146,7 +146,7 @@ main blockquote p::after {
 }
 
 main img {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -157,6 +157,7 @@ footer {
 @media (min-width: 600px) {
   main>.section-wrapper.hero {
     height: 500px;
+    padding-bottom: 2rem;
   }
 }
 
