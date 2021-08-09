@@ -63,17 +63,24 @@ const EMBEDS_CONFIG = {
   },
 };
 
+const LOAD_DELAY = 1000;
+
 function decorateBlockEmbeds($block) {
   $block.querySelectorAll('.embed.block a[href]').forEach(($a) => {
     const url = new URL($a.href.replace(/\/$/, ''));
     const config = EMBEDS_CONFIG[url.hostname];
+    $block.innerHTML = '';
     if (config) {
-      const html = config.embed(url);
-      $block.innerHTML = html;
-      $block.classList = `block embed embed-${config.type}`;
+      $block.className = `block embed embed-${config.type}`;
+      setTimeout(() => {
+        const html = config.embed(url);
+        $block.innerHTML = html;
+      }, LOAD_DELAY);
     } else {
-      $block.innerHTML = getDefaultEmbed(url);
-      $block.classList = `block embed embed-${getServer(url)}`;
+      $block.className = `block embed embed-${getServer(url)}`;
+      setTimeout(() => {
+        $block.innerHTML = getDefaultEmbed(url);
+      }, LOAD_DELAY);
     }
   });
 }
