@@ -1,4 +1,5 @@
 export default async function decorate($block) {
+  if ($block.querySelector(':scope ul')) return; // avoid duplicate loading
   const $nav = $block.appendChild(document.createElement('ul'));
   fetch('/nav.json')
     .then((resp) => resp.json())
