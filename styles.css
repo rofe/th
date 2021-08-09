@@ -46,7 +46,7 @@ header, footer {
   padding: 1rem;
   padding: 1rem;
   font-weight: 600;
-  min-height: 3rem;
+  min-height: 46px;
   font-size: 0.75rem;
 }
 
@@ -57,6 +57,7 @@ main {
   opacity: 0;
   transition: opacity 0.2s;
   height: fit-content;
+  min-height: calc(100vh - 92px);
 }
 
 header, main, footer {
@@ -147,6 +148,10 @@ main blockquote p::after {
 main img {
   max-width: 80%;
   height: auto;
+}
+
+footer {
+  text-align: center;
 }
 
 @media (min-width: 600px) {
