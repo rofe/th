@@ -326,6 +326,7 @@ async function loadNav($header) {
 function decoratePage(win = window) {
   const doc = win.document;
   doc.documentElement.className = 'theme-2';
+  doc.documentElement.setAttribute('lang', 'de');
   const $main = doc.querySelector('main');
   const $header = doc.querySelector('header');
   if ($header) {
