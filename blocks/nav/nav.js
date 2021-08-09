@@ -7,15 +7,13 @@ export default async function decorate($block) {
         const $navLink = document.createElement('a');
         $navLink.textContent = title;
         $navLink.href = url;
+        if (url === window.location.pathname) {
+          $navLink.classList.add('selected');
+        }
         const $navItem = document.createElement('li');
         $navItem.append($navLink);
         $nav.append($navItem);
       });
     })
     .catch((e) => console.error('error loading nav', e));
-  $block.querySelectorAll('a').forEach(($a) => {
-    if ($a.getAttribute('href') === window.location.pathname) {
-      $a.classList.add('selected');
-    }
-  }); 
 }
