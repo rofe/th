@@ -7,6 +7,7 @@ export default async function decorate($block) {
       data.forEach(({ title, url }) => {
         const $navLink = document.createElement('a');
         $navLink.textContent = title;
+        $navLink.title = title;
         $navLink.href = url;
         if (url === window.location.pathname) {
           $navLink.classList.add('selected');

@@ -241,6 +241,7 @@ function decorateHero($main) {
     const $wrapper = $headerImg.closest('.section-wrapper');
     $wrapper.style.backgroundImage = `url(${src})`;
     $wrapper.classList.add('hero');
+    if ($headerImg.alt) $wrapper.setAttribute('title', $headerImg.alt);
     $headerImg.parentNode.remove();
   }
 }
