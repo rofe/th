@@ -13,19 +13,13 @@
 }
 
 .nav a:any-link {
-  color: var(--highlight);
   opacity: 0.75;
-  text-transform: uppercase;
-  text-decoration: none;
 }
 
-.nav a:any-link:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
+.nav a:any-link:hover,
 .nav a.selected:any-link {
   opacity: 1;
+  text-decoration: underline;
 }
 
 @media (min-width: 600px) {

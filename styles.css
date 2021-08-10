@@ -48,6 +48,19 @@ header, footer {
   font-weight: 600;
   min-height: 46px;
   font-size: 0.75rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header a:any-link,
+footer a:any-link {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+header a:any-link:hover,
+footer a:any-link:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -122,6 +135,10 @@ main>.section-wrapper.hero h1 {
 
 main p:empty {
   display: none;
+}
+
+main p:first-of-type {
+  margin-top: 0;
 }
 
 main li {
