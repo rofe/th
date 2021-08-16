@@ -10,7 +10,8 @@
  * governing permissions and limitations under the License.
  */
 
-main .embed {
+main .block.embed {
+  visibility: unset;
   max-width: 100%;
   max-height: 396px;
   height: 157px;

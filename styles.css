@@ -38,6 +38,11 @@ body {
   color: var(--text);
   font-size: 1.2rem;
   background-color: var(--background);
+  display: none;
+}
+
+body.appear {
+  display: unset;
 }
 
 header, footer {
@@ -79,7 +84,7 @@ header, main, footer {
   max-width: 650px;
 }
 
-main.ready {
+main.appear {
   opacity: 1;
 }
 
@@ -165,6 +170,10 @@ main blockquote p::after {
 main img {
   max-width: 100%;
   height: auto;
+}
+
+main .block {
+  visibility: hidden;
 }
 
 footer {

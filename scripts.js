@@ -284,7 +284,7 @@ function decorateMain($main) {
   });
   decorateHero($main);
   decorateBlocks($main);
-  $main.classList.add('ready');
+  $main.classList.add('appear');
 }
 
 /**
@@ -349,6 +349,7 @@ function decoratePage(win = window) {
       addPublishDependencies('/nav.json');
     });
   }
+  doc.body.className = 'appear';
 }
 
 decoratePage(window);

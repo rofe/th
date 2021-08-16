@@ -1,3 +1,7 @@
+main .block.form {
+  visibility: unset;
+}
+
 main .form input, main textarea, main button {
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: 1.25rem;
