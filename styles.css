@@ -38,11 +38,6 @@ body {
   color: var(--text);
   font-size: 1.2rem;
   background-color: var(--background);
-  display: none;
-}
-
-body.appear {
-  display: unset;
 }
 
 header, footer {
@@ -84,7 +79,7 @@ header, main, footer {
   max-width: 650px;
 }
 
-main.appear {
+main.ready {
   opacity: 1;
 }
 
