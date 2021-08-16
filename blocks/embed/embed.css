@@ -22,18 +22,22 @@ main .block.embed {
   max-width: 800px;
 }
 
+main .embed a:any-link {
+  color: black;
+}
+
 main .embed.embed-instagram {
   max-width: fit-content;
 }
 
 @media (min-width: 600px) {
-  main .embed {
+  main .block.embed {
     height: 312px;
   }
 }
 
 @media (min-width: 1200px) {
-  main .embed {
+  main .block.embed {
     height: 396px;
   }
 }

@@ -86,5 +86,5 @@ function decorateBlockEmbeds($block) {
 }
 
 export default function decorate($block) {
-  decorateBlockEmbeds($block);
+  // decorateBlockEmbeds($block);
 }

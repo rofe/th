@@ -1,9 +1,5 @@
-main .block.form {
-  visibility: unset;
-  min-height: 1024px;
-}
-
 main .form.ready {
+  visibility: unset;
   min-height: unset;
 }
 
