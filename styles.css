@@ -167,6 +167,14 @@ main img {
   height: auto;
 }
 
+main .block {
+  visibility: hidden;
+}
+
+main .form {
+  min-height: 1024px;
+}
+
 footer {
   text-align: center;
 }

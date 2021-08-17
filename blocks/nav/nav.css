@@ -1,3 +1,11 @@
+.nav {
+  display: none;
+}
+
+.nav.ready {
+  display: unset;
+}
+
 .nav > ul {
   display: flex;
   justify-content: center;

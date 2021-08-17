@@ -33,3 +33,8 @@ main textarea {
 main .form input:hover {
   border: 1px solid var(--text);
 }
+
+main .form.ready {
+  visibility: unset;
+  min-height: unset;
+}

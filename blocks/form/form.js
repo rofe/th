@@ -64,5 +64,6 @@ export default async function decorate($block) {
         if ($field) $block.append($field);
       });
     })
+    .then(() => $block.classList.add('ready'))
     .catch((e) => console.error('error loading form', e));
 }
