@@ -1,6 +1,11 @@
 export default async function decorate($block) {
   if ($block.querySelector(':scope ul')) return; // avoid duplicate loading
   const $nav = $block.appendChild(document.createElement('ul'));
+  $nav.addEventListener('click', () => {
+    $nav.setAttribute('title', 'Menü schliessen');
+    $block.classList.toggle('open');
+  });
+  $nav.setAttribute('title', 'Menü öffnen');
   fetch('/nav.json')
     .then((resp) => resp.json())
     .then(({ data }) => {

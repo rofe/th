@@ -43,8 +43,6 @@ body {
 header, footer {
   background-color: var(--heading);
   color: var(--highlight);
-  padding: 1rem;
-  padding: 1rem;
   font-weight: 600;
   min-height: 46px;
   font-size: 0.75rem;
@@ -176,6 +174,7 @@ main .form {
 }
 
 footer {
+  padding: 1rem;
   text-align: center;
 }
 

@@ -1,37 +1,64 @@
 .nav {
-  display: none;
-}
-
-.nav.ready {
-  display: unset;
+  position: relative;
 }
 
 .nav > ul {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   list-style: none;
+  cursor: pointer;
+}
+
+.nav > ul::before {
+  content: "𝄞";
+  width: 100%;
+  text-align: center;
   padding: 0;
-  margin: 0;
+  font-size: 2rem;
+  position: absolute;
+  left: 0;
+  top: 3px;
 }
 
 .nav > ul > li {
-  margin: 0 1rem 0 0;
+  display: none;
+}
+
+.nav.open > ul > li {
+  display: unset;
+}
+
+.nav.open ul {
+  margin: 0;
+  padding: 3rem 1rem 1rem 1rem;
+  background-color: var(--heading);
+  z-index: 1; /* make sure nav is on top of embeds */
+}
+
+.nav.open > ul::before {
+  transform: rotate(30deg);
+  opacity: 0.75;
+}
+
+.nav.open > ul > li {
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 0.75rem 0;
   white-space: nowrap;
 }
 
 .nav a:any-link {
+  padding: 1rem;
   opacity: 0.75;
-}
+}  
 
 .nav a:any-link:hover,
 .nav a.selected:any-link {
   opacity: 1;
   text-decoration: underline;
-}
-
-@media (min-width: 600px) {
-  .nav > ul > li {
-    margin-right: 2rem;
-  }
 }
