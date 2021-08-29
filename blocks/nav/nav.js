@@ -2,16 +2,16 @@ export default async function decorate($block) {
   if ($block.querySelector(':scope ul')) return; // avoid duplicate loading
   const $toggle = $block.appendChild(document.createElement('a'));
   const $nav = $block.appendChild(document.createElement('ul'));
-  $toggle.addEventListener('click', () => {
-    $block.classList.toggle('open');
-    $toggle.classList.toggle('selected');
-  });
   // $toggle.innerHTML = '&nbsp;';
   $toggle.classList.add('toggle');
   $toggle.setAttribute('href', '#');
   $toggle.setAttribute('title', 'Menü');
   $toggle.setAttribute('tabindex', 0);
-  fetch('/nav.json')
+  $toggle.addEventListener('click', () => {
+    $block.classList.toggle('open');
+    $toggle.classList.toggle('selected');
+  });
+fetch('/nav.json')
     .then((resp) => resp.json())
     .then(({ data }) => {
       data.forEach(({ title, url }) => {
@@ -27,5 +27,6 @@ export default async function decorate($block) {
         $nav.append($navItem);
       });
     })
+    .then(() => $block.classList.add('ready'))
     .catch((e) => console.error('error loading nav', e));
 }

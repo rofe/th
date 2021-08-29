@@ -61,6 +61,10 @@ footer a:any-link:hover {
   text-decoration: underline;
 }
 
+header ul {
+  margin: 0;
+}
+
 main {
   margin-top: 0;
   background: var(--content);

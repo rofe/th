@@ -1,5 +1,10 @@
 .nav {
   position: relative;
+  display: none;
+}
+
+.nav.ready {
+  display: block;
 }
 
 .nav .toggle::before {
@@ -67,6 +72,7 @@
 
 @media (min-width: 1200px) {
   /* always show nav in sidebar */
+
   .nav {
     padding-top: 3.7rem;
     text-align: center;

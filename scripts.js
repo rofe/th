@@ -323,8 +323,7 @@ function decorateFooter($footer) {
 }
 
 async function loadNav($header) {
-  await loadBlock($header.firstElementChild);
-  $header.querySelector('.nav').classList.add('ready');
+  loadBlock($header.firstElementChild);
 }
 
 function decoratePage(win = window) {
