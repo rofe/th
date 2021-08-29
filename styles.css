@@ -46,6 +46,7 @@ header, footer {
   font-weight: 600;
   min-height: 46px;
   font-size: 0.75rem;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -59,6 +60,10 @@ footer a:any-link {
 header a:any-link:hover,
 footer a:any-link:hover {
   text-decoration: underline;
+}
+
+header > * {
+  display: none;
 }
 
 header ul {
@@ -179,7 +184,6 @@ main .form {
 
 footer {
   padding: 1rem;
-  text-align: center;
   white-space: nowrap;
 }
 

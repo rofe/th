@@ -11,7 +11,7 @@ export default async function decorate($block) {
     $block.classList.toggle('open');
     $toggle.classList.toggle('selected');
   });
-fetch('/nav.json')
+  fetch('/nav.json')
     .then((resp) => resp.json())
     .then(({ data }) => {
       data.forEach(({ title, url }) => {
@@ -27,6 +27,5 @@ fetch('/nav.json')
         $nav.append($navItem);
       });
     })
-    .then(() => $block.classList.add('ready'))
     .catch((e) => console.error('error loading nav', e));
 }
