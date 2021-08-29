@@ -43,11 +43,10 @@ body {
 header, footer {
   background-color: var(--heading);
   color: var(--highlight);
-  padding: 1rem;
-  padding: 1rem;
   font-weight: 600;
   min-height: 46px;
   font-size: 0.75rem;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -63,6 +62,14 @@ footer a:any-link:hover {
   text-decoration: underline;
 }
 
+header > * {
+  display: none;
+}
+
+header ul {
+  margin: 0;
+}
+
 main {
   margin-top: 0;
   background: var(--content);
@@ -75,7 +82,7 @@ main {
 
 header, main, footer {
   margin: 0 auto;  
-  width: 100vw;
+  width: 100%;
   max-width: 650px;
 }
 
@@ -176,7 +183,8 @@ main .form {
 }
 
 footer {
-  text-align: center;
+  padding: 1rem;
+  white-space: nowrap;
 }
 
 @media (min-width: 600px) {
@@ -187,7 +195,33 @@ footer {
 }
 
 @media (min-width: 1200px) {
-  header, main, footer {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 200px 800px 1fr;
+    grid-template-rows: auto 46px;
+    grid-template-areas: 
+      ". header main ."
+      ". footer main .";
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  footer {
+    height: 46px;
+    text-align: unset;
+    grid-area: footer;
+  }
+
+  main {
+    grid-area: main;
     max-width: 800px;
+    min-height: 100vh;
+    padding-bottom: 0;
+  }
+
+  main>.section-wrapper.hero {
+    height: 600px;
   }
 }
