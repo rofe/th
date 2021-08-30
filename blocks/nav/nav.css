@@ -2,16 +2,9 @@
   position: relative;
 }
 
-.nav .toggle::before {
-  position: absolute;
-  top: 2px;
-  content: "𝄞";
-  transition: transform .3s;
-}
-
 .nav a.toggle:any-link {
   display: block;
-  padding: 0;
+  padding: 3px 0 0 0;
   height: 46px;
   font-size: 2rem;
   text-align: center;
@@ -19,14 +12,14 @@
   user-select: none;
 }
 
-.nav a.toggle:hover,
 .nav a.toggle.selected:any-link {
   text-decoration: none;
+  font-style: italic;
+  opacity: 1;
 }
 
-.nav.open a.toggle::before {
-  transform: rotate(30deg);
-  opacity: 1;
+.nav a.toggle::before {
+  content: "𝄞";
 }
 
 .nav > ul {
@@ -42,7 +35,7 @@
   z-index: 1; /* make sure nav stays on top */
 }
 
-.nav.open ul {
+.nav.open > ul {
   display: flex;
 }
 
@@ -54,13 +47,13 @@
   white-space: nowrap;
 }
 
-.nav a:any-link {
+.nav > ul a:any-link {
   padding: 1rem;
   opacity: 0.75;
 }  
 
-.nav a:any-link:hover,
-.nav a.selected:any-link {
+.nav > ul a:any-link:hover,
+.nav > ul a.selected:any-link {
   opacity: 1;
   text-decoration: underline;
 }
@@ -91,10 +84,7 @@
   .nav > ul > li,
   .nav.open > ul > li {
     display: unset;
-    /* width: 100%; */
     font-size: 1rem;
-    padding: 0.75em 0;
-    white-space: nowrap;
   }
 }
 
