@@ -30,7 +30,7 @@ function embedYoutube(url) {
   const usp = new URLSearchParams(url.search);
   const vid = usp.get('v');
   const embed = url.pathname;
-  const embedHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+  const embedHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 74%;">
     <iframe src="https://www.youtube.com${vid ? `/embed/${vid}?rel=0&amp;v=${vid}` : embed}" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen="" scrolling="no" allow="encrypted-media; accelerometer; gyroscope; picture-in-picture" title="Content from Youtube" loading="lazy"></iframe>
   </div>`;
   return embedHTML;
