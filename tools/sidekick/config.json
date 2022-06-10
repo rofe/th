@@ -1,0 +1,16 @@
+{
+  "project": "TH",
+  "host": "trio-holdriooo.ch",
+  "plugins": [
+    {
+      "id": "test1",
+      "title": "My plugin",
+      "title_i18n": {
+        "de": "Mein plugin",
+        "fr": "Mon plugin"
+      },
+      "url": "/tools/test/index.html",
+      "environments": [ "edit", "preview" ]
+    }
+  ]
+}
