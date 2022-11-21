@@ -46,9 +46,9 @@ async function submitForm(form) {
     },
     body: JSON.stringify({ data: payload }),
   });
+  console.log(resp);
   if (resp.ok) {
     await resp.text();
-    console.log(resp);
     return payload;
   }
   return null;
