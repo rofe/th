@@ -29,6 +29,8 @@ function constructPayload(form) {
   [...form.elements].forEach((fe) => {
     if (fe.type === 'checkbox') {
       if (fe.checked) payload[fe.id] = fe.value;
+    } else if (fe.name) {
+      payload[fe.name] = fe.value;
     } else if (fe.id) {
       payload[fe.id] = fe.value;
     }
@@ -180,6 +182,7 @@ async function createForm(formURL) {
   const captcha = document.createElement('div');
   captcha.classList.add('cf-turnstile', 'field-wrapper');
   captcha.dataset.sitekey = SITE_KEY;
+  captcha.dataset.responseFieldName = 'cf-turnstile-response';
   form.append(captcha);
 
   form.addEventListener('change', () => applyRules(form, rules));
