@@ -182,6 +182,7 @@ async function createForm(formURL) {
   const captcha = document.createElement('div');
   captcha.classList.add('cf-turnstile', 'field-wrapper');
   captcha.dataset.sitekey = SITE_KEY;
+  captcha.dataset.theme = 'light';
   captcha.dataset.responseFieldName = 'cf-turnstile-response';
   form.append(captcha);
 
