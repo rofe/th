@@ -46,8 +46,12 @@ async function submitForm(form) {
     },
     body: JSON.stringify({ data: payload }),
   });
-  await resp.text();
-  return payload;
+  if (resp.ok) {
+    await resp.text();
+    console.log(resp);
+    return payload;
+  }
+  return null;
 }
 
 function createButton(fd) {
@@ -60,9 +64,11 @@ function createButton(fd) {
       if (form.checkValidity()) {
         event.preventDefault();
         button.setAttribute('disabled', '');
-        await submitForm(form);
-        const redirectTo = fd.Extra;
-        window.location.href = redirectTo;
+        const payload = await submitForm(form);
+        if (payload) {
+          const redirectTo = fd.Extra;
+          window.location.href = redirectTo;
+        }
       }
     });
   }
