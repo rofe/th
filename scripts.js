@@ -1,3 +1,16 @@
+export function loadScript(url, callback, container = document.querySelector('head')) {
+  let script = container.querySelector(`script[src="${url}"]`);
+  if (!script) {
+    script = document.createElement('script');
+    script.src = url;
+    script.async = true;
+    container.append(script);
+    script.onload = callback;
+    return script;
+  }
+  return script;
+}
+
 /**
  * Loads a CSS file.
  * @param {string} href The path to the CSS file

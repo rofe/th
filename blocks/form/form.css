@@ -1,3 +1,7 @@
+main .form {
+  visibility: visible;
+}
+
 main .form input, main textarea, main button {
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: 1.25rem;
@@ -26,7 +30,7 @@ main .form input, main textarea {
   background-color: transparent;
 }
 
-main textarea {
+main .form textarea {
   min-height: 10rem;
 }
 
@@ -34,7 +38,11 @@ main .form input:hover {
   border: 1px solid var(--text);
 }
 
-main .form.ready {
-  visibility: unset;
-  min-height: unset;
+main .form label.required::after {
+  content: "*";
+  color: var(--content)
+}
+
+main .form .cf-turnstile {
+  padding-top: 40px;
 }
