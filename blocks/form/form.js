@@ -197,5 +197,5 @@ export default async function decorate(block) {
   if (form) {
     form.replaceWith(await createForm(form.href));
   }
-  loadScript('https://challenges.cloudflare.com/turnstile/v0/api.js');
+  // loadScript('https://challenges.cloudflare.com/turnstile/v0/api.js');
 }
