@@ -48,7 +48,6 @@ async function submitForm(form) {
     },
     body: JSON.stringify({ data: payload }),
   });
-  console.log(resp);
   if (resp.ok) {
     await resp.text();
     return payload;
@@ -87,6 +86,7 @@ function createInput(fd) {
   const input = document.createElement('input');
   input.type = fd.Type;
   input.id = fd.Field;
+  input.value = fd.Value || '';
   input.setAttribute('placeholder', fd.Placeholder);
   if (fd.Mandatory === 'x') {
     input.setAttribute('required', 'required');
@@ -197,5 +197,5 @@ export default async function decorate(block) {
   if (form) {
     form.replaceWith(await createForm(form.href));
   }
-  // loadScript('https://challenges.cloudflare.com/turnstile/v0/api.js');
+  loadScript('https://challenges.cloudflare.com/turnstile/v0/api.js');
 }
