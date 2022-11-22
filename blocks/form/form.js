@@ -35,6 +35,8 @@ function constructPayload(form) {
       payload[fe.id] = fe.value;
     }
   });
+  // send date
+  payload.gesendet = new Date().toLocaleString('de-CH');
   return payload;
 }
 
