@@ -75,13 +75,16 @@ const loadEmbed = (block, link) => {
   const config = EMBEDS_CONFIG.find((e) => e.match.some((match) => link.includes(match)));
   const url = new URL(link);
   if (config) {
-    block.innerHTML = config.embed(url);
+    setTimeout(() => {
+      block.innerHTML = config.embed(url);
+      block.classList.add('embed-is-loaded');
+    }, 3000);
+    block.innerHTML = '';
     block.classList = `block embed embed-${config.match[0]}`;
   } else {
     block.innerHTML = getDefaultEmbed(url);
     block.classList = 'block embed';
   }
-  block.classList.add('embed-is-loaded');
 };
 
 export default function decorate(block) {
@@ -90,9 +93,7 @@ export default function decorate(block) {
   const observer = new IntersectionObserver((entries) => {
     if (entries.some((e) => e.isIntersecting)) {
       observer.disconnect();
-      setTimeout(() => {
-        loadEmbed(block, link);
-      }, 3000);
+      loadEmbed(block, link);
     }
   });
   observer.observe(block);
