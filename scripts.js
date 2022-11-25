@@ -256,6 +256,7 @@ function resetOptimizedImageURL($elem, attrib) {
 function decorateHero($main) {
   const $headerImg = $main.querySelector(':scope>div:first-of-type>div>:first-child>picture>img');
   if ($headerImg) {
+    $headerImg.setAttribute('loading', 'eager');
     const $wrapper = $headerImg.closest('.section-wrapper');
     $wrapper.classList.add('hero');
   }
