@@ -175,7 +175,8 @@ main .embed {
   text-align: center;
 }
 
-main .embed a:any-link {
+main .embed a:any-link,
+main .form a:any-link {
   display: none;
 }
 
