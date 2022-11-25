@@ -256,14 +256,9 @@ function resetOptimizedImageURL($elem, attrib) {
 function decorateHero($main) {
   const $headerImg = $main.querySelector(':scope>div:first-of-type>div>:first-child>picture>img');
   if ($headerImg) {
-    const src = $headerImg.getAttribute('src');
+    $headerImg.setAttribute('loading', 'eager');
     const $wrapper = $headerImg.closest('.section-wrapper');
-    $wrapper.style.backgroundImage = `url(${src})`;
     $wrapper.classList.add('hero');
-    if ($headerImg.getAttribute('alt')) {
-      $wrapper.setAttribute('title', $headerImg.getAttribute('alt'));
-    }
-    $headerImg.parentNode.remove();
   }
 }
 
@@ -367,12 +362,11 @@ function decoratePage(win = window) {
         decorateFooter($footer);
       }
       addPublishDependencies('/nav.json');
+      if (window.location.hostname.endsWith('hlx.page') || window.location.hostname === ('localhost')) {
+        import('../tools/preview/preview.js');
+      }
     });
   }
 }
 
 decoratePage(window);
-
-if (window.location.hostname.endsWith('hlx.page') || window.location.hostname === ('localhost')) {
-  import('../tools/preview/preview.js');
-}
