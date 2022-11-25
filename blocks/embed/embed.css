@@ -12,11 +12,21 @@
 
 main .embed {
   max-width: 100%;
-  height: auto;
+  height: 0;
+  padding-bottom: 56.25%;
   background-color: black;
   color: black;
   width: unset;
   text-align: center;
+}
+
+main .embed > div {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+main .embed.embed-is-loaded > div {
+  opacity: 1;
 }
 
 main .embed a:any-link {
