@@ -15,9 +15,12 @@ main .form input, main textarea, main button {
 }
 
 main .form button {
+  box-sizing: border-box;
+  height: 66px;
   color: var(--heading);
   opacity: 0.75;
   background-color: var(--highlight);
+  margin-bottom: 0;
 }
 
 main .form button:hover {
@@ -43,6 +46,8 @@ main .form label.required::after {
   color: var(--content)
 }
 
-main .form .cf-turnstile {
-  padding-top: 40px;
+main .form .form-submit-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }

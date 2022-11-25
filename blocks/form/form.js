@@ -78,6 +78,15 @@ function createButton(fd) {
   return button;
 }
 
+function createCaptcha() {
+  const captcha = document.createElement('div');
+  captcha.classList.add('cf-turnstile', 'field-wrapper');
+  captcha.dataset.sitekey = SITE_KEY;
+  captcha.dataset.theme = 'light';
+  captcha.dataset.responseFieldName = 'cf-turnstile-response';
+  return captcha;
+}
+
 function createHeading(fd) {
   const heading = document.createElement('h3');
   heading.textContent = fd.Label;
@@ -164,6 +173,7 @@ async function createForm(formURL) {
         fieldWrapper.append(createTextArea(fd));
         break;
       case 'submit':
+        fieldWrapper.append(createCaptcha());
         fieldWrapper.append(createButton(fd));
         break;
       default:
@@ -181,12 +191,6 @@ async function createForm(formURL) {
     }
     form.append(fieldWrapper);
   });
-  const captcha = document.createElement('div');
-  captcha.classList.add('cf-turnstile', 'field-wrapper');
-  captcha.dataset.sitekey = SITE_KEY;
-  captcha.dataset.theme = 'light';
-  captcha.dataset.responseFieldName = 'cf-turnstile-response';
-  form.append(captcha);
 
   form.addEventListener('change', () => applyRules(form, rules));
   applyRules(form, rules);
