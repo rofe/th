@@ -256,14 +256,8 @@ function resetOptimizedImageURL($elem, attrib) {
 function decorateHero($main) {
   const $headerImg = $main.querySelector(':scope>div:first-of-type>div>:first-child>picture>img');
   if ($headerImg) {
-    // const src = $headerImg.getAttribute('src');
     const $wrapper = $headerImg.closest('.section-wrapper');
-    // $wrapper.style.backgroundImage = `url(${src})`;
     $wrapper.classList.add('hero');
-  //   if ($headerImg.getAttribute('alt')) {
-  //     $wrapper.setAttribute('title', $headerImg.getAttribute('alt'));
-  //   }
-  //   $headerImg.parentNode.remove();
   }
 }
 
