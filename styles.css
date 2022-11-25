@@ -126,11 +126,13 @@ main>.section-wrapper {
 
 main>.section-wrapper.hero {
   display: flex;
+  position: relative;
+  z-index: 0;
+  box-sizing: border-box;
   align-items: flex-end;
   margin-top: 0;
+  background-color: transparent;
   padding: 2rem 3rem 1.5rem 3rem;
-  background-size: cover;
-  background-position: center center;
   height: 300px;
   text-shadow: 0 0 5px black;
 }
@@ -139,6 +141,19 @@ main>.section-wrapper.hero h1 {
   color: var(--highlight);
   margin-bottom: 1rem;
 }
+
+main>.section-wrapper.hero picture {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;  line-height: 0;
+  font-size: 0;
+}
+
+
 
 main p:empty {
   display: none;
