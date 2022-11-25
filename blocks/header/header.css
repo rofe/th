@@ -1,3 +1,18 @@
+header a:any-link,
+footer a:any-link {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+header a:any-link:hover,
+footer a:any-link:hover {
+  text-decoration: underline;
+}
+
+header ul {
+  margin: 0;
+}
+
 .nav {
   position: relative;
 }
@@ -86,8 +101,4 @@
     display: unset;
     font-size: 1rem;
   }
-}
-
-header.ready > * {
-  display: block;
 }

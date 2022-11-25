@@ -1,4 +1,4 @@
-import { loadScript } from '../../scripts.js';
+import { loadScript } from '../../scripts/scripts.js';
 
 const SITE_KEY = '0x4AAAAAAABT7cxnmigzg05I';
 

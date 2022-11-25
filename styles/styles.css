@@ -3,7 +3,6 @@
 }
 
 html {
-
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -51,31 +50,10 @@ header, footer {
   text-decoration: none;
 }
 
-header a:any-link,
-footer a:any-link {
-  color: var(--highlight);
-  text-decoration: none;
-}
-
-header a:any-link:hover,
-footer a:any-link:hover {
-  text-decoration: underline;
-}
-
-header > * {
-  display: none;
-}
-
-header ul {
-  margin: 0;
-}
-
 main {
   margin-top: 0;
   background: var(--content);
   padding-bottom: 2rem;
-  opacity: 0;
-  transition: opacity 0.2s;
   height: fit-content;
   min-height: calc(100vh - 92px);
 }
@@ -84,10 +62,6 @@ header, main, footer {
   margin: 0 auto;  
   width: 100%;
   max-width: 650px;
-}
-
-main.ready {
-  opacity: 1;
 }
 
 h1, h2, h3,
@@ -120,11 +94,11 @@ a:hover {
   text-decoration: underline;
 }
 
-main>.section-wrapper {
+main>.section {
   padding: 2rem 3rem 0 3rem; 
 }
 
-main>.section-wrapper.hero {
+main>.section.hero {
   display: flex;
   position: relative;
   z-index: 0;
@@ -137,12 +111,12 @@ main>.section-wrapper.hero {
   text-shadow: 0 0 5px black;
 }
 
-main>.section-wrapper.hero h1 {
+main>.section.hero h1 {
   color: var(--highlight);
   margin-bottom: 1rem;
 }
 
-main>.section-wrapper.hero picture {
+main>.section.hero picture {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -153,13 +127,11 @@ main>.section-wrapper.hero picture {
   font-size: 0;
 }
 
-
-
 main p:empty {
   display: none;
 }
 
-main p:first-of-type {
+main .default-content-wrapper:first-of-type > p {
   margin-top: 0;
 }
 
@@ -189,10 +161,6 @@ main img {
   height: auto;
 }
 
-main .block {
-  visibility: hidden;
-}
-
 main .form {
   min-height: 1024px;
 }
@@ -203,7 +171,7 @@ footer {
 }
 
 @media (min-width: 600px) {
-  main>.section-wrapper.hero {
+  main>.section.hero {
     height: 500px;
     padding-bottom: 2rem;
   }
@@ -236,7 +204,7 @@ footer {
     padding-bottom: 0;
   }
 
-  main>.section-wrapper.hero {
+  main>.section.hero {
     height: 600px;
   }
 }

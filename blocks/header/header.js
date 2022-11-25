@@ -1,14 +1,19 @@
-export default async function decorate($block) {
-  if ($block.querySelector(':scope ul')) return; // avoid duplicate loading
-  const $toggle = $block.appendChild(document.createElement('a'));
-  const $nav = $block.appendChild(document.createElement('ul'));
+/**
+ * decorates the header, mainly the nav
+ * @param {Element} block The header block element
+ */
+export default async function decorate(block) {
+  block.classList.add('nav');
+  if (block.querySelector(':scope ul')) return; // avoid duplicate loading
+  const $toggle = block.appendChild(document.createElement('a'));
+  const $nav = block.appendChild(document.createElement('ul'));
   $toggle.classList.add('toggle');
   $toggle.setAttribute('href', '#');
   $toggle.setAttribute('title', 'Menü');
   $toggle.setAttribute('tabindex', 0);
   $toggle.addEventListener('click', (evt) => {
     evt.stopPropagation();
-    $block.classList.toggle('open');
+    block.classList.toggle('open');
     $toggle.classList.toggle('selected');
   });
   fetch('/nav.json')
@@ -29,7 +34,7 @@ export default async function decorate($block) {
     })
     .catch((e) => console.error('error loading nav', e));
   document.body.addEventListener('click', () => {
-    $block.classList.remove('open');
+    block.classList.remove('open');
     $toggle.classList.remove('selected');
   });
 }
