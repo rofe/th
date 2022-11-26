@@ -79,6 +79,7 @@ function createButton(fd) {
 }
 
 function createCaptcha() {
+  loadScript('https://challenges.cloudflare.com/turnstile/v0/api.js');
   const captcha = document.createElement('div');
   captcha.classList.add('cf-turnstile', 'field-wrapper');
   captcha.dataset.sitekey = SITE_KEY;
@@ -203,5 +204,4 @@ export default async function decorate(block) {
   if (form) {
     form.replaceWith(await createForm(form.href));
   }
-  loadScript('https://challenges.cloudflare.com/turnstile/v0/api.js');
 }

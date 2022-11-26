@@ -49,7 +49,15 @@ main .form .form-submit-wrapper {
 }
 
 main .form .cf-turnstile {
+  width: 100%;
+  height: 66px;
+  overflow: hidden;
+  background-color: white;
   text-align: center;
+}
+
+main .form[data-block-status="loaded"] {
+  min-height: unset;
 }
 
 @media (min-width: 1200px) {
@@ -57,5 +65,9 @@ main .form .cf-turnstile {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+  }
+
+  main .form .cf-turnstile {
+    max-width: 300px;
   }
 }
