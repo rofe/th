@@ -7,29 +7,13 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-html.theme-1 {
-  --highlight: #590202;
-  --text: #400106;
-  --heading: #8C0410;
-  --content: #BF0A19;
-  --background: #FFFFFF;
-}
-
-html.theme-2 {
-  --content: #E5D4C3;
+:root {
+  --content: #EEE3D8;
   --text: #60371E;
   --nav: #9F3219;
-  --heading: #A6341B;
+  --heading: #862B13;
   --highlight: #F9C743;
   --background: #c0b69f;
-}
-
-html.theme-3 {
-  --background: #D8D9D7;
-  --heading: #F27405;
-  --highlight: #F25C05;
-  --nav: #F28B50;
-  --text: #A62103;
 }
 
 body {

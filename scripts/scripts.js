@@ -84,8 +84,7 @@ export function decorateMain(main) {
  * loads everything needed to get to LCP.
  */
 async function loadEager(doc) {
-  document.documentElement.lang = 'en';
-  document.documentElement.classList.add('theme-2');
+  document.documentElement.lang = 'de-CH';
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {

@@ -14,13 +14,12 @@ main .form button {
   box-sizing: border-box;
   height: 66px;
   color: var(--heading);
-  opacity: 0.75;
-  background-color: var(--highlight);
+background-color: var(--highlight);
   margin-bottom: 0;
 }
 
 main .form button:hover {
-  opacity: 1;
+  background-color: #F9D46C;
   cursor: pointer;
 }
 
