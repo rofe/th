@@ -54,7 +54,6 @@ main {
   margin-top: 0;
   background: var(--content);
   padding-bottom: 2rem;
-  height: fit-content;
   min-height: calc(100vh - 92px);
 }
 
