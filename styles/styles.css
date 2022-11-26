@@ -80,12 +80,18 @@ a:any-link {
   color: var(--heading);
   /* text-decoration: none; */
 }
+
 a:hover {
   text-decoration: underline;
 }
 
 main>.section {
   padding: 2rem 3rem 0 3rem; 
+  visibility: hidden;
+}
+
+main>.section[data-section-status="loaded"] {
+  visibility: visible;
 }
 
 main>.section.hero {
@@ -113,6 +119,7 @@ main>.section.hero picture {
   left: 0;
   bottom: 0;
   right: 0;
+  height: fit-content;
   box-sizing: border-box;  line-height: 0;
   font-size: 0;
 }
