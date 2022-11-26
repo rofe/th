@@ -46,7 +46,6 @@ header ul {
   flex-wrap: wrap;
   list-style: none;
   user-select: none;
-  background-color: var(--heading);
   z-index: 1; /* make sure nav stays on top */
 }
 
