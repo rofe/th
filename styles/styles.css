@@ -16,8 +16,9 @@ html.theme-1 {
 }
 
 html.theme-2 {
-  --content: #D1BF91;
+  --content: #E5D4C3;
   --text: #60371E;
+  --nav: #A6341B;
   --heading: #A6341B;
   --highlight: #F9C743;
   --background: #C7C8C4;
@@ -40,7 +41,7 @@ body {
 }
 
 header, footer {
-  background-color: var(--heading);
+  background-color: var(--nav);
   color: var(--highlight);
   font-weight: 600;
   min-height: 46px;
