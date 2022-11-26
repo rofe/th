@@ -10,27 +10,21 @@
  * governing permissions and limitations under the License.
  */
 
-main .block.embed {
-  visibility: unset;
-  max-width: 100%;
-  height: auto;
-  background-color: black;
-  color: black;
-  width: unset;
-  text-align: center;
+main .embed > div {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+main .embed.embed-is-loaded > div {
+  opacity: 1;
 }
 
 main .embed a:any-link {
   color: black;
 }
 
-main .embed.embed-instagram {
-  max-width: fit-content;
-}
-
 @media (min-width: 1200px) {
-  main .block.embed {
+  main .embed {
     max-width: 704px;
-    height: 520px;
   }
 }

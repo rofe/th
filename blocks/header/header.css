@@ -1,3 +1,18 @@
+header a:any-link,
+footer a:any-link {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+header a:any-link:hover,
+footer a:any-link:hover {
+  text-decoration: underline;
+}
+
+header ul {
+  margin: 0;
+}
+
 .nav {
   position: relative;
 }
@@ -31,7 +46,7 @@
   flex-wrap: wrap;
   list-style: none;
   user-select: none;
-  background-color: var(--heading);
+  background-color: var(--nav);
   z-index: 1; /* make sure nav stays on top */
 }
 
@@ -86,8 +101,4 @@
     display: unset;
     font-size: 1rem;
   }
-}
-
-header.ready > * {
-  display: block;
 }
