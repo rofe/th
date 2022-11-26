@@ -35,15 +35,21 @@ header, footer {
   text-decoration: none;
 }
 
+header {
+  position: absolute;
+  top: 0;
+}
+
 main {
-  margin-top: 0;
+  margin-top: 46px;
   background: var(--content);
   padding-bottom: 2rem;
   min-height: calc(100vh - 92px);
 }
 
 header, main, footer {
-  margin: 0 auto;  
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   max-width: 650px;
 }
@@ -187,7 +193,20 @@ footer {
   }
 
   header {
+    position: unset;
     grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+    max-width: 800px;
+    min-height: 100vh;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  main>.section.hero {
+    height: 600px;
   }
 
   footer {
@@ -196,14 +215,4 @@ footer {
     grid-area: footer;
   }
 
-  main {
-    grid-area: main;
-    max-width: 800px;
-    min-height: 100vh;
-    padding-bottom: 0;
-  }
-
-  main>.section.hero {
-    height: 600px;
-  }
 }
