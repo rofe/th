@@ -35,13 +35,7 @@ header, footer {
   text-decoration: none;
 }
 
-header {
-  position: absolute;
-  top: 0;
-}
-
 main {
-  margin-top: 46px;
   background: var(--content);
   padding-bottom: 2rem;
   min-height: calc(100vh - 92px);
