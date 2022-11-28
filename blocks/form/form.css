@@ -19,7 +19,7 @@ background-color: var(--highlight);
 }
 
 main .form button:hover {
-  background-color: #F9D46C;
+  background-color: var(--selected);
   cursor: pointer;
 }
 
