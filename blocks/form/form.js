@@ -79,12 +79,19 @@ function createButton(fd) {
 }
 
 function createCaptcha() {
-  loadScript('https://challenges.cloudflare.com/turnstile/v0/api.js');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        loadScript('https://challenges.cloudflare.com/turnstile/v0/api.js');
+      }
+    });
+  });
   const captcha = document.createElement('div');
   captcha.classList.add('cf-turnstile', 'field-wrapper');
   captcha.dataset.sitekey = SITE_KEY;
   captcha.dataset.theme = 'light';
   captcha.dataset.responseFieldName = 'cf-turnstile-response';
+  obs.observe(captcha);
   return captcha;
 }
 
