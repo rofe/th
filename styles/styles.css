@@ -81,7 +81,7 @@ a:hover {
 }
 
 main>.section {
-  padding: 2rem 3rem 0 3rem;
+  padding: 2rem 2rem 0 2rem;
   visibility: hidden;
 }
 
@@ -206,6 +206,10 @@ footer {
     min-height: 100vh;
     margin-top: 0;
     padding-bottom: 0;
+  }
+
+  main>.section {
+    padding: 2rem 3rem 0 3rem;
   }
 
   main>.section.hero {
