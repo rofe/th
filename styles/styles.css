@@ -21,7 +21,7 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin: 0;
   color: var(--text);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   background-color: var(--background);
 }
 
@@ -30,7 +30,7 @@ header, footer {
   color: var(--highlight);
   font-weight: 600;
   min-height: 46px;
-  font-size: 0.75rem;
+  font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -70,7 +70,7 @@ p, dl, ol, ul, pre, blockquote {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-  
+
 a:any-link {
   color: var(--heading);
   /* text-decoration: none; */
@@ -81,7 +81,7 @@ a:hover {
 }
 
 main>.section {
-  padding: 2rem 3rem 0 3rem; 
+  padding: 2rem 3rem 0 3rem;
   visibility: hidden;
 }
 
@@ -189,9 +189,10 @@ footer {
     display: grid;
     grid-template-columns: 1fr 200px 800px 1fr;
     grid-template-rows: auto 46px;
-    grid-template-areas: 
+    grid-template-areas:
       ". header main ."
       ". footer main .";
+    font-size: 1.2rem;
   }
 
   header {
@@ -215,6 +216,7 @@ footer {
     height: 46px;
     text-align: unset;
     grid-area: footer;
+    font-size: 0.75rem;
   }
 
 }
