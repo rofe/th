@@ -83,6 +83,7 @@ function createCaptcha() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         loadScript('https://challenges.cloudflare.com/turnstile/v0/api.js');
+        obs.disconnect();
       }
     });
   });
