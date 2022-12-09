@@ -6,31 +6,38 @@ const handleRequest = async (eventReq, env) => {
       // check for turnstile token
       json = await eventReq.json();
       const token = json.data && json.data['cf-turnstile-response'];
-      if (token) {
-        // Validate the token by calling the
-        // "/siteverify" API endpoint.
-        const ip = eventReq.headers.get('CF-Connecting-IP');
-        const formData = new FormData();
-        formData.append('secret', env.SECRET_KEY);
-        formData.append('response', token);
-        formData.append('remoteip', ip);
-
-        const url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
-        const result = await fetch(url, {
-          body: formData,
-          method: 'POST',
+      if (!token) {
+        // turnstile token missing
+        return new Response('', {
+          status: 403,
+          headers: {
+            'x-error': 'Missing captcha token',
+          },
         });
+      }
+      // Validate the token by calling the
+      // "/siteverify" API endpoint.
+      const ip = eventReq.headers.get('CF-Connecting-IP');
+      const formData = new FormData();
+      formData.append('secret', env.SECRET_KEY);
+      formData.append('response', token);
+      formData.append('remoteip', ip);
 
-        const outcome = await result.json();
-        if (!outcome.success) {
-          // turnstile token verification failed
-          return new Response('', {
-            status: 400,
-            headers: {
-              'x-error': 'Invalid captcha token provided',
-            },
-          });
-        }
+      const url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+      const result = await fetch(url, {
+        body: formData,
+        method: 'POST',
+      });
+
+      const outcome = await result.json();
+      if (!outcome.success) {
+        // turnstile token verification failed
+        return new Response('', {
+          status: 403,
+          headers: {
+            'x-error': 'Invalid captcha token provided',
+          },
+        });
       }
     } catch (e) {
       console.error(e);
