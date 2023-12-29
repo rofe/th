@@ -11,6 +11,7 @@ import {
   waitForLCP,
   loadBlocks,
   loadCSS,
+  getMetadata,
 } from './lib-franklin.js';
 
 const LCP_BLOCKS = []; // add your LCP blocks to the list
@@ -52,6 +53,15 @@ function buildHeroBlock(main) {
   }
 }
 
+function buildDarkBlock(main) {
+  const darkText = getMetadata('dark')
+  if (darkText) {
+    const section = document.createElement('div');
+    section.append(buildBlock('dark', [[`<h1>${darkText}</h1>`]]));
+    main.append(section);
+  }
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -59,6 +69,7 @@ function buildHeroBlock(main) {
 function buildAutoBlocks(main) {
   try {
     buildHeroBlock(main);
+    buildDarkBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
