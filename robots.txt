@@ -1,5 +1,3 @@
 # trio-holdriooo.ch robots.txt
 user-agent: *
-allow: /
-
-sitemap: https://www.trio-holdriooo.ch/sitemap.xml
+disallow: /
