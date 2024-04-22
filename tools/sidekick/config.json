@@ -30,7 +30,8 @@
     {
       "id": "plugin-6",
       "title": "Test Plugin 6",
-      "url": "https://www.aem.live/"
+      "url": "https://www.aem.live/",
+      "pinned": false
     }
   ]
 }
