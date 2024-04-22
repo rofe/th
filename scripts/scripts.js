@@ -55,7 +55,7 @@ function buildHeroBlock(main) {
 
 function buildDarkBlock(main) {
   const darkText = getMetadata('dark')
-  if (darkText && !window.loaction.pathname.startsWith('/test/')) {
+  if (darkText && !window.location.pathname.startsWith('/test/')) {
     const section = document.createElement('div');
     section.append(buildBlock('dark', [[`<h1>${darkText}</h1>`]]));
     main.append(section);
