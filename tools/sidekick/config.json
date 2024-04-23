@@ -25,12 +25,27 @@
     {
       "id": "plugin-5",
       "title": "Test Plugin 5",
-      "url": "https://www.aem.live/",
-      "pinned": true
+      "url": "https://www.aem.live/"
     },
     {
       "id": "plugin-6",
       "title": "Test Plugin 6",
+      "url": "https://www.aem.live/"
+    },
+    {
+      "id": "plugin-7",
+      "title": "Test Plugin 7",
+      "url": "https://www.aem.live/"
+    },
+    {
+      "id": "unpinned-plugin-1",
+      "title": "Unpinned Test Plugin 1",
+      "url": "https://www.aem.live/",
+      "pinned": false
+    },
+    {
+      "id": "unpinned-plugin-2",
+      "title": "Unpinned Test Plugin 2",
       "url": "https://www.aem.live/",
       "pinned": false
     }
