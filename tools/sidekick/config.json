@@ -36,6 +36,23 @@
       "id": "plugin-7",
       "title": "Test Plugin 7",
       "url": "https://www.aem.live/"
+    },
+    {
+      "id": "tools",
+      "title": "Tools",
+      "isContainer": true
+    },
+    {
+      "id": "tool-1",
+      "title": "Tool 1",
+      "containerId": "tools",
+      "url": "https://www.aem.live/"
+    },
+    {
+      "id": "tool-2",
+      "title": "Tool 2",
+      "containerId": "tools",
+      "url": "https://www.aem.live/"
     }
   ]
 }
