@@ -8,11 +8,6 @@
       "url": "https://www.aem.live/"
     },
     {
-      "id": "plugin-2",
-      "title": "Test Plugin 2",
-      "url": "https://www.aem.live/"
-    },
-    {
       "id": "container-1",
       "title": "Container 1",
       "isContainer": true
@@ -27,6 +22,11 @@
       "id": "child-2",
       "title": "Child 2",
       "containerId": "container-1",
+      "url": "https://www.aem.live/"
+    },
+    {
+      "id": "plugin-2",
+      "title": "Test Plugin 2",
       "url": "https://www.aem.live/"
     },
     {
