@@ -13,8 +13,20 @@
       "url": "https://www.aem.live/"
     },
     {
-      "id": "plugin-3",
-      "title": "Test Plugin 3",
+      "id": "container-1",
+      "title": "Container 1",
+      "isContainer": true
+    },
+    {
+      "id": "child-1",
+      "title": "Child 1",
+      "containerId": "container-1",
+      "url": "https://www.aem.live/"
+    },
+    {
+      "id": "child-2",
+      "title": "Child 2",
+      "containerId": "container-1",
       "url": "https://www.aem.live/"
     },
     {
@@ -38,20 +50,20 @@
       "url": "https://www.aem.live/"
     },
     {
-      "id": "tools",
-      "title": "Tools",
+      "id": "container-2",
+      "title": "Container 2",
       "isContainer": true
     },
     {
-      "id": "tool-1",
-      "title": "Tool 1",
-      "containerId": "tools",
+      "id": "child-3",
+      "title": "Child 3",
+      "containerId": "container-2",
       "url": "https://www.aem.live/"
     },
     {
-      "id": "tool-2",
-      "title": "Tool 2",
-      "containerId": "tools",
+      "id": "child-4",
+      "title": "Child 4",
+      "containerId": "container-2",
       "url": "https://www.aem.live/"
     }
   ]
