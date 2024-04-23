@@ -25,7 +25,8 @@
     {
       "id": "plugin-5",
       "title": "Test Plugin 5",
-      "url": "https://www.aem.live/"
+      "url": "https://www.aem.live/",
+      "pinned": false
     },
     {
       "id": "plugin-6",
