@@ -42,28 +42,33 @@
     {
       "id": "plugin-5",
       "title": "Test Plugin 5",
+      "environments": ["live"],
       "url": "https://www.aem.live/"
     },
     {
       "id": "plugin-6",
       "title": "Test Plugin 6",
+      "environments": ["live"],
       "url": "https://www.aem.live/"
     },
     {
       "id": "container-2",
       "title": "Container 2",
+      "environments": ["live"],
       "isContainer": true
     },
     {
       "id": "child-3",
       "title": "Child 3",
       "containerId": "container-2",
+      "environments": ["live"],
       "url": "https://www.aem.live/"
     },
     {
       "id": "child-4",
       "title": "Child 4",
       "containerId": "container-2",
+      "environments": ["live"],
       "url": "https://www.aem.live/"
     }
   ]
