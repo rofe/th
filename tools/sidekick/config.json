@@ -49,7 +49,7 @@
       "id": "plugin-6",
       "title": "Test Plugin 6",
       "environments": ["live"],
-      "url": "https://www.aem.live/"
+      "event": "plugin-6"
     },
     {
       "id": "container-2",
