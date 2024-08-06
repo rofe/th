@@ -1,3 +1,4 @@
 # trio-holdriooo.ch robots.txt
 user-agent: *
+
 disallow: /
