@@ -1,4 +1,8 @@
 {
   "project": "TH",
-  "host": "www.trio-holdriooo.ch"
+  "host": "www.trio-holdriooo.ch",
+  "plugins": [{
+    "id": "publish",
+    "requiresConfirmation": true
+  }]
 }
