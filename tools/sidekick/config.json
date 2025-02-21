@@ -5,10 +5,13 @@
     "id": "publish",
     "confirm": true
   }, {
-    "id": "library",
-    "title": "Library",
-    "environments": ["edit"],
-    "url": "/tools/sidekick/library.html",
-    "includePaths": ["**.docx**"]
+    "id": "reviews",
+    "title": "Review",
+    "isPopover": true,
+    "popoverRect": "width:200px; height: 200px",
+    "url": "https://labs.aem.live/tools/snapshot-admin/palette.html",
+    "environments": [
+      "preview"
+    ]
   }]
 }
