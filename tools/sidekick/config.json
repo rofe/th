@@ -8,7 +8,7 @@
     },
     {
       "id": "bulk-publish",
-      "excludePaths": ["/drive/folders/**"]
+      "excludePaths": ["/drive/folders/1CAnctIHePoojtgXu0SPqTJHycPgvkvdj"]
     },
     {
       "id": "reviews",
