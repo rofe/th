@@ -1,17 +1,24 @@
 {
   "project": "TH",
   "host": "www.trio-holdriooo.ch",
-  "plugins": [{
-    "id": "publish",
-    "confirm": true
-  }, {
-    "id": "reviews",
-    "title": "Review",
-    "isPopover": true,
-    "popoverRect": "width:200px; height: 200px",
-    "url": "https://labs.aem.live/tools/snapshot-admin/palette.html",
-    "environments": [
-      "preview"
-    ]
-  }]
+  "plugins": [
+    {
+      "id": "publish",
+      "confirm": true
+    },
+    {
+      "id": "bulk-publish",
+      "excludePaths": ["/drive/folders/**"]
+    },
+    {
+      "id": "reviews",
+      "title": "Review",
+      "isPopover": true,
+      "popoverRect": "width:200px; height: 200px",
+      "url": "https://labs.aem.live/tools/snapshot-admin/palette.html",
+      "environments": [
+        "preview"
+      ]
+    }
+  ]
 }
