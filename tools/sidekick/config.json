@@ -4,7 +4,7 @@
   "plugins": [
     {
       "id": "publish",
-      "confirm": true
+      "confirm": false
     },
     {
       "id": "bulk-publish",
